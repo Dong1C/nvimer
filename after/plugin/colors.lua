@@ -7,4 +7,10 @@ function ColorMyPencils(color)
 
 end
 
-ColorMyPencils()
+function UnColorMyPencils(color)
+	color = color
+	vim.cmd.colorscheme("none")
+
+end
+-- ColorMyPencils()
+-- vim.keymap.set("n", "<leader>sc", function() ColorMyPencils() end)

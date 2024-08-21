@@ -1,2 +1,3 @@
 require("dockerg")
-print("helloworld")
+-- print("helloworld")
+vim.cmd.set("nu")
