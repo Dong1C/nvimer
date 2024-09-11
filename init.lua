@@ -1,7 +1,12 @@
 -- require("dockerg")
 -- print("helloworld")
 -- load the options
-require("options")
-require("keymaps")
-require("dockerg.lazy")
-vim.cmd.set("nu")
+-- local test_path = vim.fn.stdpath("data")
+-- print(test_path)
+
+-- real settings
+-- require("options")
+-- require("keymaps")
+-- require("lazy")
+
+require("dockerg")

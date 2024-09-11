@@ -17,13 +17,24 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
-  spec = {
-    -- import your plugins
-    { import = "plugins" },
-  },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+    {
+        'Shatur/neovim-ayu',
+        config = function()
+            require('ayu').setup({
+                mirage = false, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
+                terminal = true, -- Set to `false` to let terminal manage its own colors.
+                overrides = {
+                    Normal = { bg = "None" },
+                    ColorColumn = { bg = "None" },
+                    SignColumn = { bg = "None" },
+                    Folded = { bg = "None" },
+                    FoldColumn = { bg = "None" },
+                    CursorLine = { bg = "None" },
+                    CursorColumn = { bg = "None" },
+                    WhichKeyFloat = { bg = "None" },
+                    VertSplit = { bg = "None" },
+                },-- make transparency
+            })
+        end,
+    }
 })
